@@ -1,6 +1,7 @@
 # Python script that synchronizes two folders one-way: source to the replica.
 
 # imports
+import argparse
 import logging
 
 
@@ -31,3 +32,21 @@ logger.addHandler(console_handler)
 logger.debug('Debug test message')
 logger.info('Info test message')
 logger.error('Error test message')
+
+
+# Create the parser
+parser = argparse.ArgumentParser(
+    description='Python script that synchronizes two folders one-way: source to the replica.')
+
+# Add arguments
+parser.add_argument("-s", '--source_path', type=str, help='Source path for synchronization.', required=True)
+parser.add_argument("-r", '--replica_path', type=str, help='Replica path for synchronization.', required=True)
+parser.add_argument('-i', '--synchronization_interval', help='An integer for synchronization interval in seconds',
+                    type=int, required=True)
+parser.add_argument('-l', '--log_path', type=str, help='Path for synchronization logs.', required=True)
+
+# Parse the arguments
+args = parser.parse_args()
+
+# Print "Hello" + the user input arguments
+print('Hello,', args.source_path, args.replica_path, args.synchronization_interval, args.log_path)
