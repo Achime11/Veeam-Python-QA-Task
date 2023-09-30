@@ -33,24 +33,24 @@ def copy_file(source_file, destination_file):
         print(f"An error occurred: {str(e)}")
 
 
-def generate_file_md5(file_path, filename, blocksize=2 ** 20):
+def generate_file_md5(file_path, block_size=2 ** 20):
     md5 = hashlib.md5()
-    with open(os.path.join(file_path, filename), "rb") as f:
+    with open(os.path.join(file_path), "rb") as file:
         while True:
-            buf = f.read(blocksize)
+            buf = file.read(block_size)
             if not buf:
                 break
             md5.update(buf)
     return md5.hexdigest()
 
 
-def logger_init():
+def logger_init(log_file):
     # Configure the logger
-    logger = logging.getLogger("Sync One-Way")
-    logger.setLevel(logging.DEBUG)
+    logger_instance = logging.getLogger("Sync One-Way")
+    logger_instance.setLevel(logging.DEBUG)
 
     # Create a file handler to log to a file
-    file_handler = logging.FileHandler('example.log')
+    file_handler = logging.FileHandler(log_file)
     file_handler.setLevel(logging.INFO)
 
     # Create a console handler to log to the console
@@ -65,11 +65,11 @@ def logger_init():
     console_handler.setFormatter(formatter)
 
     # Add the handlers to the logger
-    logger.addHandler(file_handler)
-    logger.addHandler(console_handler)
+    logger_instance.addHandler(file_handler)
+    logger_instance.addHandler(console_handler)
 
     # Return logger
-    return logger
+    return logger_instance
 
 
 def synchronize_folders(source_folder, replica_folder):
@@ -138,12 +138,7 @@ args = parser.parse_args()
 # Print "Hello" + the user input arguments
 print('Hello,', args.source_path, args.replica_path, args.synchronization_interval, args.log_path)
 
-logger = logger_init()
-
-# Test log types
-logger.debug('Debug test message')
-logger.info('Info test message')
-logger.error('Error test message')
+logger = logger_init(args.log_path)
 
 scheduler = sched.scheduler(time.time, time.sleep)
 
