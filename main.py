@@ -2,7 +2,26 @@
 
 # imports
 import argparse
+import hashlib
+import shutil
 import logging
+
+
+# copy function with shutil library
+def copy_file_lib(src, dst):
+    with open(src, 'rb') as source_file, open(dst, 'wb') as dest_file:
+        shutil.copyfileobj(source_file, dest_file)
+
+
+def generate_file_md5(file_path, filename, blocksize=2 ** 20):
+    md5 = hashlib.md5()
+    with open(os.path.join(file_path, filename), "rb") as f:
+        while True:
+            buf = f.read(blocksize)
+            if not buf:
+                break
+            md5.update(buf)
+    return md5.hexdigest()
 
 
 # Configure the logger
