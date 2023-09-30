@@ -26,9 +26,9 @@ def copy_file(source_file, destination_file):
                     if not data:
                         break
                     destination.write(data)
-        print(f"File '{source_file}' copied to '{destination_file}'")
+        logger.info(f"File '{source_file}' copied to '{destination_file}'")
     except FileNotFoundError:
-        print(f"Source file '{source_file}' not found.")
+        logger.warning(f"Source file '{source_file}' not found.")
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 
