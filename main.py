@@ -93,7 +93,6 @@ def synchronize_folders(source_folder, replica_folder):
             synchronize_folders(source_item, replica_item)
         # else check for file in replica folder, if exist or time is different or size is different copy file
         elif (not os.path.exists(replica_item) or
-              os.path.getmtime(source_item) != os.path.getmtime(replica_item) or
               os.path.getsize(source_item) != os.path.getsize(replica_item) or
               generate_file_md5(source_item) != generate_file_md5(replica_item)):
             logger.info(f"Copying '{source_item}' to '{replica_item}'")
@@ -104,9 +103,13 @@ def synchronize_folders(source_folder, replica_folder):
         replica_item = os.path.join(replica_folder, item)
         source_item = os.path.join(source_folder, item)
 
-        if not os.path.exists(source_item) and os.path.isfile(replica_item):
-            logger.info(f"Removing '{replica_item}' (not in source folder)")
-            os.remove(replica_item)
+        if not os.path.exists(source_item):
+            if os.path.isfile(replica_item):
+                logger.info(f"Removing '{replica_item}' file (not in source folder)")
+                os.remove(replica_item)
+            elif os.path.isdir(replica_item):
+                logger.info(f"Removing '{replica_item}' folder (not in source folder)")
+                shutil.rmtree(replica_item)
 
 
 def sync(scheduler_param, source_folder, replica_folder):
