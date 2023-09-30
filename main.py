@@ -3,9 +3,11 @@
 # imports
 import argparse
 import hashlib
-import os
-import shutil
 import logging
+import os
+import sched
+import shutil
+import time
 
 
 # copy function with shutil library
@@ -42,33 +44,46 @@ def generate_file_md5(file_path, filename, blocksize=2 ** 20):
     return md5.hexdigest()
 
 
-# Configure the logger
-logger = logging.getLogger("Sync One-Way")
-logger.setLevel(logging.DEBUG)
+def logger_init():
+    # Configure the logger
+    logger = logging.getLogger("Sync One-Way")
+    logger.setLevel(logging.DEBUG)
 
-# Create a file handler to log to a file
-file_handler = logging.FileHandler('example.log')
-file_handler.setLevel(logging.INFO)
+    # Create a file handler to log to a file
+    file_handler = logging.FileHandler('example.log')
+    file_handler.setLevel(logging.INFO)
 
-# Create a console handler to log to the console
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.DEBUG)
+    # Create a console handler to log to the console
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.DEBUG)
 
-# Create a formatter to specify the log message format
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    # Create a formatter to specify the log message format
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-# Set the formatter
-file_handler.setFormatter(formatter)
-console_handler.setFormatter(formatter)
+    # Set the formatter
+    file_handler.setFormatter(formatter)
+    console_handler.setFormatter(formatter)
 
-# Add the handlers to the logger
-logger.addHandler(file_handler)
-logger.addHandler(console_handler)
+    # Add the handlers to the logger
+    logger.addHandler(file_handler)
+    logger.addHandler(console_handler)
 
-# Test log types
-logger.debug('Debug test message')
-logger.info('Info test message')
-logger.error('Error test message')
+    # Return logger
+    return logger
+
+
+def synchronize_folders(source_folder, replica_folder):
+    logger.info(f"Syncing \"{source_folder}\" to \"{replica_folder}\" !")
+
+
+def sync(scheduler, source_folder, replica_folder):
+    logger.info("Sync started!")
+
+    synchronize_folders(source_folder, replica_folder)
+
+    logger.info("Sync finished!")
+
+    scheduler.enter(args.synchronization_interval, 1, sync, (scheduler, source_folder, replica_folder,))
 
 
 # Create the parser
@@ -87,3 +102,15 @@ args = parser.parse_args()
 
 # Print "Hello" + the user input arguments
 print('Hello,', args.source_path, args.replica_path, args.synchronization_interval, args.log_path)
+
+logger = logger_init()
+
+# Test log types
+logger.debug('Debug test message')
+logger.info('Info test message')
+logger.error('Error test message')
+
+scheduler = sched.scheduler(time.time, time.sleep)
+
+scheduler.enter(0, 1, sync, (scheduler, args.source_path, args.replica_path,))
+scheduler.run()

@@ -1,0 +1,69 @@
+2023-09-30 17:55:50,854 - Sync One-Way - INFO - Info test message
+2023-09-30 17:55:50,854 - Sync One-Way - ERROR - Error test message
+2023-09-30 17:56:02,506 - Sync One-Way - INFO - Info test message
+2023-09-30 17:56:02,506 - Sync One-Way - ERROR - Error test message
+2023-09-30 17:56:22,507 - Sync One-Way - INFO - Test sync
+2023-09-30 17:56:42,508 - Sync One-Way - INFO - Test sync
+2023-09-30 17:56:49,551 - Sync One-Way - INFO - Info test message
+2023-09-30 17:56:49,555 - Sync One-Way - ERROR - Error test message
+2023-09-30 17:56:49,555 - Sync One-Way - INFO - Test sync
+2023-09-30 17:57:09,555 - Sync One-Way - INFO - Test sync
+2023-09-30 18:06:17,063 - Sync One-Way - INFO - Info test message
+2023-09-30 18:06:17,063 - Sync One-Way - ERROR - Error test message
+2023-09-30 18:06:17,063 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:06:17,064 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:06:37,065 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:06:37,065 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:06:44,803 - Sync One-Way - INFO - Info test message
+2023-09-30 18:06:44,803 - Sync One-Way - ERROR - Error test message
+2023-09-30 18:06:44,803 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:06:44,803 - Sync One-Way - INFO - Syncing
+2023-09-30 18:06:44,803 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:07:04,804 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:07:04,804 - Sync One-Way - INFO - Syncing
+2023-09-30 18:07:04,804 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:07:24,804 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:07:24,804 - Sync One-Way - INFO - Syncing
+2023-09-30 18:07:24,804 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:07:44,805 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:07:44,805 - Sync One-Way - INFO - Syncing
+2023-09-30 18:07:44,805 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:08:04,805 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:08:04,805 - Sync One-Way - INFO - Syncing
+2023-09-30 18:08:04,805 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:08:24,806 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:08:24,806 - Sync One-Way - INFO - Syncing
+2023-09-30 18:08:24,806 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:08:42,064 - Sync One-Way - INFO - Info test message
+2023-09-30 18:08:42,064 - Sync One-Way - ERROR - Error test message
+2023-09-30 18:08:42,064 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:08:42,064 - Sync One-Way - INFO - Syncing
+2023-09-30 18:08:42,064 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:09:15,374 - Sync One-Way - INFO - Info test message
+2023-09-30 18:09:15,374 - Sync One-Way - ERROR - Error test message
+2023-09-30 18:09:15,374 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:09:15,374 - Sync One-Way - INFO - Syncing ./source to ./replica!
+2023-09-30 18:09:15,374 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:09:35,376 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:09:35,376 - Sync One-Way - INFO - Syncing ./source to ./replica!
+2023-09-30 18:09:35,376 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:09:55,376 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:09:55,376 - Sync One-Way - INFO - Syncing ./source to ./replica!
+2023-09-30 18:09:55,376 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:10:15,377 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:10:15,377 - Sync One-Way - INFO - Syncing ./source to ./replica!
+2023-09-30 18:10:15,377 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:10:35,377 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:10:35,377 - Sync One-Way - INFO - Syncing ./source to ./replica!
+2023-09-30 18:10:35,377 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:10:55,378 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:10:55,378 - Sync One-Way - INFO - Syncing ./source to ./replica!
+2023-09-30 18:10:55,378 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:11:15,379 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:11:15,379 - Sync One-Way - INFO - Syncing ./source to ./replica!
+2023-09-30 18:11:15,379 - Sync One-Way - INFO - Sync finished!
+2023-09-30 18:11:20,343 - Sync One-Way - INFO - Info test message
+2023-09-30 18:11:20,343 - Sync One-Way - ERROR - Error test message
+2023-09-30 18:11:20,343 - Sync One-Way - INFO - Sync started!
+2023-09-30 18:11:20,343 - Sync One-Way - INFO - Syncing "./source" to "./replica" !
+2023-09-30 18:11:20,343 - Sync One-Way - INFO - Sync finished!
