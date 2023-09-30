@@ -3,6 +3,7 @@
 # imports
 import argparse
 import hashlib
+import os
 import shutil
 import logging
 
@@ -11,6 +12,23 @@ import logging
 def copy_file_lib(src, dst):
     with open(src, 'rb') as source_file, open(dst, 'wb') as dest_file:
         shutil.copyfileobj(source_file, dest_file)
+
+
+# copy function with read/write chunks of data
+def copy_file(source_file, destination_file):
+    try:
+        with open(source_file, 'rb') as source:
+            with open(destination_file, 'wb') as destination:
+                while True:
+                    data = source.read(2 ** 20)  # Read in 1MB chunks
+                    if not data:
+                        break
+                    destination.write(data)
+        print(f"File '{source_file}' copied to '{destination_file}'")
+    except FileNotFoundError:
+        print(f"Source file '{source_file}' not found.")
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
 
 
 def generate_file_md5(file_path, filename, blocksize=2 ** 20):
