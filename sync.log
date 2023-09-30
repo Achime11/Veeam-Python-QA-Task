@@ -1,0 +1,3 @@
+2023-09-30 19:45:16,449 - Sync One-Way - INFO - Sync started!
+2023-09-30 19:45:16,449 - Sync One-Way - INFO - Syncing "./source" to "./replica" !
+2023-09-30 19:45:16,453 - Sync One-Way - INFO - Sync finished after 0.00350189208984375 seconds!
