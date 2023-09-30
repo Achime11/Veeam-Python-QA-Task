@@ -11,9 +11,14 @@ import time
 
 
 # copy function with shutil library
-def copy_file_lib(src, dst):
-    with open(src, 'rb') as source_file, open(dst, 'wb') as dest_file:
-        shutil.copyfileobj(source_file, dest_file)
+def copy_file_lib(source_file, destination_file):
+    try:
+        with open(source_file, 'rb') as source, open(destination_file, 'wb') as destination:
+            shutil.copyfileobj(source, destination)
+    except FileNotFoundError:
+        logger.warning(f"Source file '{source_file}' not found.")
+    except Exception as e:
+        logger.critical(f"An error occurred: {str(e)}")
 
 
 # copy function with read/write chunks of data
@@ -30,7 +35,7 @@ def copy_file(source_file, destination_file):
     except FileNotFoundError:
         logger.warning(f"Source file '{source_file}' not found.")
     except Exception as e:
-        print(f"An error occurred: {str(e)}")
+        logger.critical(f"An error occurred: {str(e)}")
 
 
 def generate_file_md5(file_path, block_size=2 ** 20):
@@ -121,7 +126,13 @@ def sync(scheduler_param, source_folder, replica_folder):
 
     logger.info(f"Sync finished after {time.time() - start_time} seconds!")
 
-    scheduler_param.enter(args.synchronization_interval, 1, sync, (scheduler_param, source_folder, replica_folder,))
+    event = scheduler_param.enter(args.synchronization_interval,
+                                  1,
+                                  sync,
+                                  (scheduler_param, source_folder, replica_folder,))
+
+    if input() != '':
+        scheduler_param.cancel(event)
 
 
 # Create the parser
@@ -138,12 +149,9 @@ parser.add_argument('-l', '--log_path', type=str, help='Path for synchronization
 # Parse the arguments
 args = parser.parse_args()
 
-# Print "Hello" + the user input arguments
-print('Hello,', args.source_path, args.replica_path, args.synchronization_interval, args.log_path)
-
 logger = logger_init(args.log_path)
 
 scheduler = sched.scheduler(time.time, time.sleep)
 
-scheduler.enter(0, 1, sync, (scheduler, args.source_path, args.replica_path,))
+scheduler.enter(0, 1, sync, (scheduler, args.source_path.replace('/', '\\'), args.replica_path.replace('/', '\\'),))
 scheduler.run()

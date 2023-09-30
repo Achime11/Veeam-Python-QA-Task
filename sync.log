@@ -1,3 +1,77 @@
-2023-09-30 19:45:16,449 - Sync One-Way - INFO - Sync started!
-2023-09-30 19:45:16,449 - Sync One-Way - INFO - Syncing "./source" to "./replica" !
-2023-09-30 19:45:16,453 - Sync One-Way - INFO - Sync finished after 0.00350189208984375 seconds!
+2023-09-30 21:30:33,348 - Sync One-Way - INFO - Sync started!
+2023-09-30 21:30:33,348 - Sync One-Way - INFO - Syncing ".\source" to ".\replica" !
+2023-09-30 21:30:33,348 - Sync One-Way - INFO - Creating '.\replica'!
+2023-09-30 21:30:33,349 - Sync One-Way - INFO - Syncing ".\source\972_0722" to ".\replica\972_0722" !
+2023-09-30 21:30:33,349 - Sync One-Way - INFO - Creating '.\replica\972_0722'!
+2023-09-30 21:30:33,349 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2933.MP4' to '.\replica\972_0722\MVI_2933.MP4'
+2023-09-30 21:30:33,729 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2933.MP4.sfk' to '.\replica\972_0722\MVI_2933.MP4.sfk'
+2023-09-30 21:30:33,730 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2934.MP4' to '.\replica\972_0722\MVI_2934.MP4'
+2023-09-30 21:30:33,796 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2934.MP4.sfk' to '.\replica\972_0722\MVI_2934.MP4.sfk'
+2023-09-30 21:30:33,797 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2935.MP4' to '.\replica\972_0722\MVI_2935.MP4'
+2023-09-30 21:30:33,848 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2935.MP4.sfk' to '.\replica\972_0722\MVI_2935.MP4.sfk'
+2023-09-30 21:30:33,850 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2936.MP4' to '.\replica\972_0722\MVI_2936.MP4'
+2023-09-30 21:30:34,349 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2936.MP4.sfk' to '.\replica\972_0722\MVI_2936.MP4.sfk'
+2023-09-30 21:30:34,350 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2937.MP4' to '.\replica\972_0722\MVI_2937.MP4'
+2023-09-30 21:30:34,939 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2937.MP4.sfk' to '.\replica\972_0722\MVI_2937.MP4.sfk'
+2023-09-30 21:30:34,940 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2938.MP4' to '.\replica\972_0722\MVI_2938.MP4'
+2023-09-30 21:30:35,910 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2938.MP4.sfk' to '.\replica\972_0722\MVI_2938.MP4.sfk'
+2023-09-30 21:30:35,911 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2939.MP4' to '.\replica\972_0722\MVI_2939.MP4'
+2023-09-30 21:30:35,995 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2939.MP4.sfk' to '.\replica\972_0722\MVI_2939.MP4.sfk'
+2023-09-30 21:30:35,996 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2940.MP4' to '.\replica\972_0722\MVI_2940.MP4'
+2023-09-30 21:30:36,261 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2940.MP4.sfk' to '.\replica\972_0722\MVI_2940.MP4.sfk'
+2023-09-30 21:30:36,262 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2941.MP4' to '.\replica\972_0722\MVI_2941.MP4'
+2023-09-30 21:30:36,313 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2941.MP4.sfk' to '.\replica\972_0722\MVI_2941.MP4.sfk'
+2023-09-30 21:30:36,314 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2942.MP4' to '.\replica\972_0722\MVI_2942.MP4'
+2023-09-30 21:30:36,861 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2942.MP4.sfk' to '.\replica\972_0722\MVI_2942.MP4.sfk'
+2023-09-30 21:30:36,864 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2943.MP4' to '.\replica\972_0722\MVI_2943.MP4'
+2023-09-30 21:30:37,640 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2943.MP4.sfk' to '.\replica\972_0722\MVI_2943.MP4.sfk'
+2023-09-30 21:30:37,642 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2944.MP4' to '.\replica\972_0722\MVI_2944.MP4'
+2023-09-30 21:30:37,675 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2944.MP4.sfk' to '.\replica\972_0722\MVI_2944.MP4.sfk'
+2023-09-30 21:30:37,676 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2945.MP4' to '.\replica\972_0722\MVI_2945.MP4'
+2023-09-30 21:30:38,686 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2945.MP4.sfk' to '.\replica\972_0722\MVI_2945.MP4.sfk'
+2023-09-30 21:30:38,688 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2946.MP4' to '.\replica\972_0722\MVI_2946.MP4'
+2023-09-30 21:30:40,264 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2946.MP4.sfk' to '.\replica\972_0722\MVI_2946.MP4.sfk'
+2023-09-30 21:30:40,266 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2947.MP4' to '.\replica\972_0722\MVI_2947.MP4'
+2023-09-30 21:30:44,180 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2947.MP4.sfk' to '.\replica\972_0722\MVI_2947.MP4.sfk'
+2023-09-30 21:30:44,184 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2948.MP4' to '.\replica\972_0722\MVI_2948.MP4'
+2023-09-30 21:30:44,967 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2948.MP4.sfk' to '.\replica\972_0722\MVI_2948.MP4.sfk'
+2023-09-30 21:30:44,971 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2949.MP4' to '.\replica\972_0722\MVI_2949.MP4'
+2023-09-30 21:30:47,064 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2949.MP4.sfk' to '.\replica\972_0722\MVI_2949.MP4.sfk'
+2023-09-30 21:30:47,068 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2950.MP4' to '.\replica\972_0722\MVI_2950.MP4'
+2023-09-30 21:30:47,318 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2950.MP4.sfk' to '.\replica\972_0722\MVI_2950.MP4.sfk'
+2023-09-30 21:30:47,322 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2951.MP4' to '.\replica\972_0722\MVI_2951.MP4'
+2023-09-30 21:30:47,510 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2951.MP4.sfk' to '.\replica\972_0722\MVI_2951.MP4.sfk'
+2023-09-30 21:30:47,513 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2952.MP4' to '.\replica\972_0722\MVI_2952.MP4'
+2023-09-30 21:30:47,679 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2952.MP4.sfk' to '.\replica\972_0722\MVI_2952.MP4.sfk'
+2023-09-30 21:30:47,681 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2953.MP4' to '.\replica\972_0722\MVI_2953.MP4'
+2023-09-30 21:30:48,001 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2953.MP4.sfk' to '.\replica\972_0722\MVI_2953.MP4.sfk'
+2023-09-30 21:30:48,002 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2954.MP4' to '.\replica\972_0722\MVI_2954.MP4'
+2023-09-30 21:30:48,123 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2954.MP4.sfk' to '.\replica\972_0722\MVI_2954.MP4.sfk'
+2023-09-30 21:30:48,124 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2955.MP4' to '.\replica\972_0722\MVI_2955.MP4'
+2023-09-30 21:30:48,571 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2955.MP4.sfk' to '.\replica\972_0722\MVI_2955.MP4.sfk'
+2023-09-30 21:30:48,572 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2956.MP4' to '.\replica\972_0722\MVI_2956.MP4'
+2023-09-30 21:30:55,280 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2956.MP4.sfk' to '.\replica\972_0722\MVI_2956.MP4.sfk'
+2023-09-30 21:30:55,282 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2957.MP4' to '.\replica\972_0722\MVI_2957.MP4'
+2023-09-30 21:31:02,127 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2957.MP4.sfk' to '.\replica\972_0722\MVI_2957.MP4.sfk'
+2023-09-30 21:31:02,131 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2958.MP4' to '.\replica\972_0722\MVI_2958.MP4'
+2023-09-30 21:31:07,089 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2958.MP4.sfk' to '.\replica\972_0722\MVI_2958.MP4.sfk'
+2023-09-30 21:31:07,093 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2959.MP4' to '.\replica\972_0722\MVI_2959.MP4'
+2023-09-30 21:31:07,152 - Sync One-Way - INFO - Copying '.\source\972_0722\MVI_2959.MP4.sfk' to '.\replica\972_0722\MVI_2959.MP4.sfk'
+2023-09-30 21:31:07,157 - Sync One-Way - INFO - Syncing ".\source\CVMISC" to ".\replica\CVMISC" !
+2023-09-30 21:31:07,157 - Sync One-Way - INFO - Creating '.\replica\CVMISC'!
+2023-09-30 21:31:07,158 - Sync One-Way - INFO - Copying '.\source\CVMISC\CV970.CTG' to '.\replica\CVMISC\CV970.CTG'
+2023-09-30 21:31:07,159 - Sync One-Way - INFO - Copying '.\source\CVMISC\CV971.CTG' to '.\replica\CVMISC\CV971.CTG'
+2023-09-30 21:31:07,159 - Sync One-Way - INFO - Copying '.\source\CVMISC\CV972.CTG' to '.\replica\CVMISC\CV972.CTG'
+2023-09-30 21:31:07,160 - Sync One-Way - INFO - Copying '.\source\CVMISC\CV973.CTG' to '.\replica\CVMISC\CV973.CTG'
+2023-09-30 21:31:07,161 - Sync One-Way - INFO - Copying '.\source\New Text Document.txt' to '.\replica\New Text Document.txt'
+2023-09-30 21:31:07,164 - Sync One-Way - INFO - Sync finished after 33.816036224365234 seconds!
+2023-09-30 21:32:07,165 - Sync One-Way - INFO - Sync started!
+2023-09-30 21:32:07,165 - Sync One-Way - INFO - Syncing ".\source" to ".\replica" !
+2023-09-30 21:32:07,166 - Sync One-Way - INFO - Syncing ".\source\972_0722" to ".\replica\972_0722" !
+2023-09-30 21:33:14,660 - Sync One-Way - INFO - Syncing ".\source\CVMISC" to ".\replica\CVMISC" !
+2023-09-30 21:33:14,666 - Sync One-Way - INFO - Sync finished after 67.50099182128906 seconds!
+2023-09-30 21:38:49,319 - Sync One-Way - INFO - Sync started!
+2023-09-30 21:38:49,319 - Sync One-Way - INFO - Syncing ".\source" to ".\replica" !
+2023-09-30 21:38:49,319 - Sync One-Way - INFO - Syncing ".\source\972_0722" to ".\replica\972_0722" !
+2023-09-30 21:39:56,375 - Sync One-Way - INFO - Syncing ".\source\CVMISC" to ".\replica\CVMISC" !
+2023-09-30 21:39:56,379 - Sync One-Way - INFO - Sync finished after 67.06047296524048 seconds!
