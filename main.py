@@ -38,6 +38,7 @@ def copy_file(source_file, destination_file):
         logger.critical(f"An error occurred: {str(e)}")
 
 
+# function that generate MD5 hash for a file given as file_path
 def generate_file_md5(file_path, block_size=2 ** 18):
     md5 = hashlib.md5()
     with open(os.path.join(file_path), "rb") as file:
@@ -49,6 +50,7 @@ def generate_file_md5(file_path, block_size=2 ** 18):
     return md5.hexdigest()
 
 
+# function that generate SHA1 hash for a file given as file_path
 def generate_file_sha1(file_path, block_size=2 ** 18):
     sha1 = hashlib.sha1()
     with open(os.path.join(file_path), "rb") as file:
@@ -60,6 +62,7 @@ def generate_file_sha1(file_path, block_size=2 ** 18):
     return sha1.hexdigest()
 
 
+# function that generate SHA256 hash for a file given as file_path
 def generate_file_sha256(file_path, block_size=2 ** 18):
     sha256 = hashlib.sha256()
     with open(os.path.join(file_path), "rb") as file:
@@ -71,6 +74,7 @@ def generate_file_sha256(file_path, block_size=2 ** 18):
     return sha256.hexdigest()
 
 
+# function that initialize the logger and returns it to use it later
 def logger_init(log_file):
     # Configure the logger
     logger_instance = logging.getLogger("Sync One-Way")
@@ -99,17 +103,22 @@ def logger_init(log_file):
     return logger_instance
 
 
+# a recursive function that sync folders from source to replica,
+# remove files and folder that are not in source but in replica they are present
 def synchronize_folders(source_folder, replica_folder):
     logger.info(f"Syncing \"{source_folder}\" to \"{replica_folder}\" !")
 
+    # check if the source folder exist
     if not os.path.exists(source_folder):
         logger.critical(f"Source folder '{source_folder}' does not exist!")
         return
 
+    # check if replica folder exit, if not create one
     if not os.path.exists(replica_folder):
         logger.info(f"Creating '{replica_folder}'!")
         os.makedirs(replica_folder)
 
+    # take every file/directory in first tree of source folder and sync with replica
     for item in os.listdir(source_folder):
         # Creating full item path
         source_item = os.path.join(source_folder, item)
@@ -127,9 +136,11 @@ def synchronize_folders(source_folder, replica_folder):
 
     # Remove files in replica folder that don't exist in source folder
     for item in os.listdir(replica_folder):
+        # create path for items in replica folder
         replica_item = os.path.join(replica_folder, item)
         source_item = os.path.join(source_folder, item)
 
+        # check if the item is a folder or item and need to be removed because is not in source folder
         if not os.path.exists(source_item):
             if os.path.isfile(replica_item):
                 logger.info(f"Removing '{replica_item}' file (not in source folder)")
@@ -139,20 +150,25 @@ def synchronize_folders(source_folder, replica_folder):
                 shutil.rmtree(replica_item)
 
 
+# main sync function where it logs sync start/finish and restart the sync process after sync interval
+# and check after every sync if the user has input something to stop the script
 def sync(scheduler_param, source_folder, replica_folder):
     logger.info("Sync started!")
 
     start_time = time.time()
 
+    # call the function to start the sync between the source and replica folders
     synchronize_folders(source_folder, replica_folder)
 
     logger.info(f"Sync finished after {time.time() - start_time} seconds!")
 
+    # add event for resync at x seconds interval of time
     event = scheduler_param.enter(args.synchronization_interval,
                                   1,
                                   sync,
                                   (scheduler_param, source_folder, replica_folder,))
 
+    # check for any inputs after the sync is done to let the user stop the script in a safe way
     if input() != '':
         scheduler_param.cancel(event)
 
@@ -171,9 +187,13 @@ parser.add_argument('-l', '--log_path', type=str, help='Path for synchronization
 # Parse the arguments
 args = parser.parse_args()
 
+# init logger
 logger = logger_init(args.log_path)
 
+# init scheduler
 scheduler = sched.scheduler(time.time, time.sleep)
 
+# add event for first sync between source folder and replica folder
 scheduler.enter(0, 1, sync, (scheduler, args.source_path.replace('/', '\\'), args.replica_path.replace('/', '\\'),))
+# start the scheduler
 scheduler.run()
