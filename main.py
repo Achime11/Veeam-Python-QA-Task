@@ -38,7 +38,7 @@ def copy_file(source_file, destination_file):
         logger.critical(f"An error occurred: {str(e)}")
 
 
-def generate_file_md5(file_path, block_size=2 ** 20):
+def generate_file_md5(file_path, block_size=2 ** 18):
     md5 = hashlib.md5()
     with open(os.path.join(file_path), "rb") as file:
         while True:
@@ -47,6 +47,28 @@ def generate_file_md5(file_path, block_size=2 ** 20):
                 break
             md5.update(buf)
     return md5.hexdigest()
+
+
+def generate_file_sha1(file_path, block_size=2 ** 18):
+    sha1 = hashlib.sha1()
+    with open(os.path.join(file_path), "rb") as file:
+        while True:
+            buf = file.read(block_size)
+            if not buf:
+                break
+            sha1.update(buf)
+    return sha1.hexdigest()
+
+
+def generate_file_sha256(file_path, block_size=2 ** 18):
+    sha256 = hashlib.sha256()
+    with open(os.path.join(file_path), "rb") as file:
+        while True:
+            buf = file.read(block_size)
+            if not buf:
+                break
+            sha256.update(buf)
+    return sha256.hexdigest()
 
 
 def logger_init(log_file):
@@ -99,7 +121,7 @@ def synchronize_folders(source_folder, replica_folder):
         # else check for file in replica folder, if exist or time is different or size is different copy file
         elif (not os.path.exists(replica_item) or
               os.path.getsize(source_item) != os.path.getsize(replica_item) or
-              generate_file_md5(source_item) != generate_file_md5(replica_item)):
+              generate_file_sha1(source_item) != generate_file_sha1(replica_item)):
             logger.info(f"Copying '{source_item}' to '{replica_item}'")
             copy_file(source_item, replica_item)
 

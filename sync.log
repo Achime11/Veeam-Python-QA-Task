@@ -75,3 +75,8 @@
 2023-09-30 21:38:49,319 - Sync One-Way - INFO - Syncing ".\source\972_0722" to ".\replica\972_0722" !
 2023-09-30 21:39:56,375 - Sync One-Way - INFO - Syncing ".\source\CVMISC" to ".\replica\CVMISC" !
 2023-09-30 21:39:56,379 - Sync One-Way - INFO - Sync finished after 67.06047296524048 seconds!
+2023-10-01 22:23:36,235 - Sync One-Way - INFO - Sync started!
+2023-10-01 22:23:36,235 - Sync One-Way - INFO - Syncing ".\source" to ".\replica" !
+2023-10-01 22:23:36,235 - Sync One-Way - INFO - Syncing ".\source\972_0722" to ".\replica\972_0722" !
+2023-10-01 22:24:02,777 - Sync One-Way - INFO - Syncing ".\source\CVMISC" to ".\replica\CVMISC" !
+2023-10-01 22:24:02,781 - Sync One-Way - INFO - Sync finished after 26.546738862991333 seconds!
